@@ -1,0 +1,36 @@
+{
+  "name": "mern-shopping-list-project",
+  "version": "1.0.0",
+  "description": "Shopping List Project with the MERN Stack",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev" : "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SukantaBala28/mern-shopping-list-project.git"
+  },
+  "keywords": [
+    "MERN",
+    "Stack"
+  ],
+  "author": "Sukanta Bala",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SukantaBala28/mern-shopping-list-project/issues"
+  },
+  "homepage": "https://github.com/SukantaBala28/mern-shopping-list-project#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
