@@ -1,6 +1,9 @@
 {
   "name": "mern-shopping-list-project",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.16.x"
+  },
   "description": "Shopping List Project with the MERN Stack",
   "main": "server.js",
   "scripts": {
