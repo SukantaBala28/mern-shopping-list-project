@@ -2,16 +2,16 @@
   "name": "mern-shopping-list-project",
   "version": "1.0.0",
   "engines": {
-    "node": "12.16.x"
+    "node": "12.16.1"
   },
   "description": "Shopping List Project with the MERN Stack",
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
     "start": "node server.js",
-    "server": "nodemon server.js",
+    "server": "nodemon server.js --exec babel-node --presets babel-preset-env",
     "client": "npm start --prefix client",
-    "dev" : "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
