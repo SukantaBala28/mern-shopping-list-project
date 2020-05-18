@@ -1,0 +1,4 @@
+{
+  "mongoURI" : "mongodb+srv://sukanta:Sukanta_Bala28@cluster0-fellx.mongodb.net/mern-stack?retryWrites=true&w=majority",
+  "jwtSecret": "sl_myshoppinglist_test123"
+}

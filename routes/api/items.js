@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const auth = require('../../middleware/auth');
 
 //Item Model
 const Item = require("../../model/Item");
@@ -14,7 +15,7 @@ router.get('/', (req, res)=>{
 })
 
 //Create New Items
-router.post('/', (req, res)=>{
+router.post('/', auth, (req, res)=>{
     const item = Item();
     item.name = req.body.name;
     item.save()
@@ -24,7 +25,7 @@ router.post('/', (req, res)=>{
 })
 
 //Delete New Item
-router.delete('/:id', (req, res)=>{
+router.delete('/:id', auth, (req, res)=>{
     Item.findByIdAndDelete(req.params.id)
     .then(()=> {
         return res.status(200).json({ data: "Delete Successfull"})
